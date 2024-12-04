@@ -11,8 +11,8 @@ public class InlogApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/co2mpare/InlogScherm.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 400, 300); // Aanpassen van de venstergrootte indien nodig
-        stage.setTitle("Inloggen");
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Inlogscherm");
         stage.setScene(scene);
         stage.show();
     }
@@ -21,4 +21,3 @@ public class InlogApplication extends Application {
         launch();
     }
 }
-

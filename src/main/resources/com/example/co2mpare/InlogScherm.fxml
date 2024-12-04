@@ -19,7 +19,7 @@
     <PasswordField fx:id="passwordField" promptText="Wachtwoord" style="-fx-background-color: white; -fx-text-fill: black;"/>
 
     <!-- Inlogknop -->
-    <Button text="Inloggen" fx:id="handleLoginButtonClick" style="-fx-background-color: #007bff; -fx-text-fill: white;" onAction="#handleLoginButtonClick"/>
+    <Button text="Inloggen" style="-fx-background-color: #007bff; -fx-text-fill: white;" onAction="#handleLoginButtonClick"/>
 
     <!-- Foutmelding -->
     <Text fx:id="errorMessage" fill="red" style="-fx-font-size: 14px;"/>
