@@ -1,42 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.text.Font?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.co2mpare.LoginController" alignment="CENTER" spacing="20.0" style="-fx-background-color: #000000; -fx-padding: 20;">
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.co2mpare.HelloController" style="-fx-background-color: black; -fx-font-family: Arial; -fx-font-size: 14px;">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
   </padding>
 
-  <!-- Header -->
-  <Label text="Welkom bij Co2mpare" font="System Bold 20" style="-fx-text-fill: #FFFFFF;"/>
+  <Label fx:id="welcomeText" text="Welkom bij Co2mpare" style="-fx-text-fill: white; -fx-font-size: 20px;"/>
+  <Label fx:id="emailLabel" text="E-mail" style="-fx-text-fill: white;"/>
+  <TextField fx:id="emailTextField" promptText="E-mail" style="-fx-background-color: #2a2a2a; -fx-text-fill: white;"/>
 
-  <Label text="Volg je koolstofvoetafdruk en neem het op tegen vrienden om een positieve impact op het milieu te maken."
-         font="System 14" style="-fx-text-fill: #D3D3D3;"/>
+  <Label fx:id="passwordLabel" text="Wachtwoord" style="-fx-text-fill: white;"/>
+  <PasswordField fx:id="passwordField" promptText="Wachtwoord" style="-fx-background-color: #2a2a2a; -fx-text-fill: white;"/>
 
-  <!-- E-mail veld -->
-  <TextField fx:id="emailField" promptText="E-mail" style="-fx-pref-width: 300; -fx-font-size: 14px; -fx-background-color: #333333; -fx-text-fill: white;"/>
+  <Button text="Inloggen" onAction="#onLoginButtonClick" style="-fx-background-color: #3b3b3b; -fx-text-fill: white;"/>
+  <Button text="Registreren" onAction="#onRegisterButtonClick" style="-fx-background-color: #3b3b3b; -fx-text-fill: white;"/>
 
-  <!-- Wachtwoord veld -->
-  <PasswordField fx:id="passwordField" promptText="Wachtwoord" style="-fx-pref-width: 300; -fx-font-size: 14px; -fx-background-color: #333333; -fx-text-fill: white;"/>
+  <Label text="Door aan te melden, ga je akkoord met onze Algemene Voorwaarden en Privacybeleid." style="-fx-text-fill: white; -fx-font-size: 10px;"/>
 
-  <!-- Inloggen knop -->
-  <Button text="Inloggen" fx:id="loginButton" style="-fx-background-color: #0078d4; -fx-text-fill: white; -fx-pref-width: 300; -fx-font-size: 16px;"/>
-
-  <!-- Registreren knop -->
-  <Button text="Registreren" fx:id="registerButton" style="-fx-background-color: #004a7c; -fx-text-fill: white; -fx-pref-width: 300; -fx-font-size: 16px;"/>
-
-  <!-- Algemene voorwaarden link -->
-  <Label text="Door aan te melden, ga je akkoord met onze Algemene Voorwaarden en Privacybeleid."
-         font="System 12" style="-fx-text-fill: #888888;"/>
-
-  <!-- Footer -->
-  <Label text="© 2023 Co2mpare. Alle rechten voorbehouden." font="System 10" style="-fx-text-fill: #888888;"/>
+  <Label text="© 2023 Co2mpare. Alle rechten voorbehouden." style="-fx-text-fill: white; -fx-font-size: 10px;"/>
 </VBox>
-
