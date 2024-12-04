@@ -5,29 +5,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class InlogApplication extends Application {
 
     @Override
-    public void start(Stage stage) throws IOException {
-        // Laad de FXML-bestand en koppel de controller
-        FXMLLoader fxmlLoader = new FXMLLoader(InlogApplication.class.getResource("/com/example/co2mpare/login.fxml"));
-
-        // Maak een nieuwe scene van de FXML
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400); // Pas de grootte van het venster aan als dat nodig is
-
-        // Stel de titel van de stage in
-        stage.setTitle("Co2mpare - Inloggen");
-
-        // Zet de scene in de stage
+    public void start(Stage stage) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/co2mpare/InlogScherm.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+        stage.setTitle("Inlog Scherm");
         stage.setScene(scene);
-
-        // Toon het venster
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch(); // Start de JavaFX applicatie
+        launch();
     }
 }
