@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="zwarte inlogg" />
+    <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="zwarte inloggen">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +105,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733312795620</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="zwarte inlogg">
+      <option name="closed" value="true" />
+      <created>1733312954069</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733312954069</updated>
+    </task>
+    <task id="LOCAL-00005" summary="zwarte inloggen">
+      <option name="closed" value="true" />
+      <created>1733317634800</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733317634800</updated>
+    </task>
+    <task id="LOCAL-00006" summary="zwarte inloggen">
+      <option name="closed" value="true" />
+      <created>1733317944314</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733317944314</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +139,7 @@
     <MESSAGE value="inin" />
     <MESSAGE value="zwarte inlog" />
     <MESSAGE value="zwarte inlogg" />
-    <option name="LAST_COMMIT_MESSAGE" value="zwarte inlogg" />
+    <MESSAGE value="zwarte inloggen" />
+    <option name="LAST_COMMIT_MESSAGE" value="zwarte inloggen" />
   </component>
 </project>

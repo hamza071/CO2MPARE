@@ -1,4 +1,4 @@
-package controller; // Dit moet overeenkomen met je FXML-declaratie
+package com.example.co2mpare; // Dit moet overeenkomen met je FXML-declaratie
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
