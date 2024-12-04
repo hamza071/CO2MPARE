@@ -1,8 +1,10 @@
-package com.example.co2mpare;
+package controller; // Dit moet overeenkomen met je FXML-declaratie
 
 import javafx.fxml.FXML;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
 public class InlogController {
 
@@ -13,11 +15,28 @@ public class InlogController {
     private PasswordField passwordField;
 
     @FXML
-    public void handleLogin() {
+    private Button loginButton;
+
+    @FXML
+    private Text errorMessage;
+
+    private static final String CORRECT_USERNAME = "admin";
+    private static final String CORRECT_PASSWORD = "admin123";
+
+    @FXML
+    public void initialize() {
+        loginButton.setOnAction(event -> handleLogin());
+    }
+
+    private void handleLogin() {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        // Voeg hier je logica voor de inlogverificatie toe
-        System.out.println("Ingelogd met gebruikersnaam: " + username + " en wachtwoord: " + password);
+        if (CORRECT_USERNAME.equals(username) && CORRECT_PASSWORD.equals(password)) {
+            errorMessage.setText("");
+            System.out.println("Inloggen succesvol!");
+        } else {
+            errorMessage.setText("Ongeldige gebruikersnaam of wachtwoord.");
+        }
     }
 }
