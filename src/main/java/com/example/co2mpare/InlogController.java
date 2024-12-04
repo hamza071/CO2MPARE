@@ -1,9 +1,8 @@
-package com.example.co2mpare; // Dit moet overeenkomen met je FXML-declaratie
+package com.example.co2mpare;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 public class InlogController {
@@ -15,28 +14,20 @@ public class InlogController {
     private PasswordField passwordField;
 
     @FXML
-    private Button loginButton;
-
-    @FXML
     private Text errorMessage;
 
-    private static final String CORRECT_USERNAME = "admin";
-    private static final String CORRECT_PASSWORD = "admin123";
-
     @FXML
-    public void initialize() {
-        loginButton.setOnAction(event -> handleLogin());
-    }
-
-    private void handleLogin() {
+    public void handleLoginButtonClick() {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        if (CORRECT_USERNAME.equals(username) && CORRECT_PASSWORD.equals(password)) {
-            errorMessage.setText("");
-            System.out.println("Inloggen succesvol!");
+        if (username.isEmpty() || password.isEmpty()) {
+            errorMessage.setText("Gebruikersnaam of wachtwoord mag niet leeg zijn!");
+        } else if (username.equals("admin") && password.equals("password")) { // Testwaarden
+            errorMessage.setText("Succesvol ingelogd!");
+            errorMessage.setStyle("-fx-fill: green;");
         } else {
-            errorMessage.setText("Ongeldige gebruikersnaam of wachtwoord.");
+            errorMessage.setText("Onjuiste gebruikersnaam of wachtwoord.");
         }
     }
 }

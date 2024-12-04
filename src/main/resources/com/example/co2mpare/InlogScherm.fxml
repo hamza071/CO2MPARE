@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Text?>
 
 <StackPane fx:controller="com.example.co2mpare.InlogController" xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: black;">
-
   <VBox spacing="20" alignment="CENTER">
     <!-- Titel -->
     <Text text="Inloggen" fill="white" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
@@ -20,10 +19,9 @@
     <PasswordField fx:id="passwordField" promptText="Wachtwoord" style="-fx-background-color: white; -fx-text-fill: black;"/>
 
     <!-- Inlogknop -->
-    <Button text="Inloggen" fx:id="loginButton" style="-fx-background-color: #007bff; -fx-text-fill: white;"/>
+    <Button text="Inloggen" fx:id="handleLoginButtonClick" style="-fx-background-color: #007bff; -fx-text-fill: white;" onAction="#handleLoginButtonClick"/>
 
     <!-- Foutmelding -->
     <Text fx:id="errorMessage" fill="red" style="-fx-font-size: 14px;"/>
   </VBox>
-
 </StackPane>
