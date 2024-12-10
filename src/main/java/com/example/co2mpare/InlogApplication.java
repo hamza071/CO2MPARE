@@ -8,16 +8,23 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class InlogApplication extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/co2mpare/InlogScherm.fxml"));
+        // Laad de FXML
+        FXMLLoader fxmlLoader = new FXMLLoader(InlogApplication.class.getResource("/com/example/co2mpare/InlogScherm.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Inlogscherm");
+
+        // Zet de titel van het venster
+        stage.setTitle("Inloggen - Co2mpare");
+
+        // Zet de scene en toon het venster
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
+        // Start de applicatie
         launch();
     }
 }

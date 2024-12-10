@@ -1,35 +1,17 @@
 package com.example.co2mpare;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
-import javafx.scene.text.Text;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class InlogController {
 
     @FXML
-    private TextField usernameField;
+    private ImageView logo;  // Zorg ervoor dat dit overeenkomt met de fx:id in de FXML
 
     @FXML
-    private PasswordField passwordField;
-
-    @FXML
-    private Text errorMessage;
-
-    @FXML
-    public void handleLoginButtonClick() {
-        // Logica voor inloggen
-        String username = usernameField.getText();
-        String password = passwordField.getText();
-
-        if (username.isEmpty() || password.isEmpty()) {
-            errorMessage.setText("Gebruikersnaam of wachtwoord mag niet leeg zijn!");
-        } else if (username.equals("admin") && password.equals("password")) {
-            errorMessage.setText("Succesvol ingelogd!");
-            errorMessage.setStyle("-fx-fill: green;");
-        } else {
-            errorMessage.setText("Onjuiste gebruikersnaam of wachtwoord.");
-            errorMessage.setStyle("-fx-fill: red;");
-        }
+    public void initialize() {
+        // Laad de afbeelding via de controller
+        logo.setImage(new Image(getClass().getResourceAsStream("/com/example/co2mpare/logo.png")));
     }
 }

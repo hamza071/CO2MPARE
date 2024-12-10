@@ -9,18 +9,12 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.image.Image?>
 
 <StackPane fx:controller="com.example.co2mpare.InlogController" xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: black;">
     <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: white; -fx-border-radius: 10px; -fx-border-color: #000; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);">
 
         <!-- Logo -->
-        <ImageView fx:id="logo" fitWidth="50" fitHeight="50" preserveRatio="true" style="-fx-margin-bottom: 10;">
-            <ImageView.image>
-                <Image url="@/com/example/co2mpare/logo.png" />
-            </ImageView.image>
-        </ImageView>
-
+        <ImageView fx:id="logo" fitWidth="50" fitHeight="50" preserveRatio="true" style="-fx-margin-bottom: 10;"/>
 
         <!-- Titel -->
         <Text text="Welkom bij Co2mpare" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #000;"/>
@@ -35,8 +29,8 @@
 
         <!-- Inlogknop -->
         <VBox spacing="10" alignment="CENTER">
-            <Button text="Inloggen" style="-fx-background-color: #4B6EF5; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 5;" onAction="#handleLoginButtonClick"/>
-            <Button text="Registreren" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 5;" onAction="#handleRegisterButtonClick"/>
+            <Button text="Inloggen" style="-fx-background-color: #4B6EF5; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 5;"/>
+            <Button text="Registreren" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 5;"/>
         </VBox>
 
         <!-- Toestemming -->
