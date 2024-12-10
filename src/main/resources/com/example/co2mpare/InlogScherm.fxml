@@ -17,9 +17,10 @@
         <!-- Logo -->
         <ImageView fx:id="logo" fitWidth="50" fitHeight="50" preserveRatio="true" style="-fx-margin-bottom: 10;">
             <ImageView.image>
-                <Image url="@logo.png" />
+                <Image url="@/com/example/co2mpare/logo.png" />
             </ImageView.image>
         </ImageView>
+
 
         <!-- Titel -->
         <Text text="Welkom bij Co2mpare" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #000;"/>
