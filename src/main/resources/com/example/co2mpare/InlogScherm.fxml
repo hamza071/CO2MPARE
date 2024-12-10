@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.Image?>
 
 <StackPane fx:controller="com.example.co2mpare.InlogController" xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: black;">
-  <VBox spacing="20" alignment="CENTER">
-    <!-- Titel -->
-    <Text text="Inloggen" fill="white" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: white; -fx-border-radius: 10px; -fx-border-color: #000; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);">
 
-    <!-- Gebruikersnaam -->
-    <TextField fx:id="usernameField" promptText="Gebruikersnaam" style="-fx-background-color: white; -fx-text-fill: black;"/>
+        <!-- Logo -->
+        <ImageView fx:id="logo" fitWidth="50" fitHeight="50" preserveRatio="true" style="-fx-margin-bottom: 10;">
+            <ImageView.image>
+                <Image url="@logo.png" />
+            </ImageView.image>
+        </ImageView>
 
-    <!-- Wachtwoord -->
-    <PasswordField fx:id="passwordField" promptText="Wachtwoord" style="-fx-background-color: white; -fx-text-fill: black;"/>
+        <!-- Titel -->
+        <Text text="Welkom bij Co2mpare" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #000;"/>
+        <Text text="Volg je koolstofvoetafdruk en neem het op tegen vrienden om een positieve impact op het milieu te maken."
+              wrappingWidth="300" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
 
-    <!-- Inlogknop -->
-    <Button text="Inloggen" style="-fx-background-color: #007bff; -fx-text-fill: white;" onAction="#handleLoginButtonClick"/>
+        <!-- Gebruikersnaam -->
+        <TextField fx:id="usernameField" promptText="E-mail" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #ddd;"/>
 
-    <!-- Foutmelding -->
-    <Text fx:id="errorMessage" fill="red" style="-fx-font-size: 14px;"/>
-  </VBox>
+        <!-- Wachtwoord -->
+        <PasswordField fx:id="passwordField" promptText="Wachtwoord" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #ddd;"/>
+
+        <!-- Inlogknop -->
+        <VBox spacing="10" alignment="CENTER">
+            <Button text="Inloggen" style="-fx-background-color: #4B6EF5; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 5;" onAction="#handleLoginButtonClick"/>
+            <Button text="Registreren" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 5;" onAction="#handleRegisterButtonClick"/>
+        </VBox>
+
+        <!-- Toestemming -->
+        <Text text="Door aan te melden, ga je akkoord met onze Algemene Voorwaarden en Privacybeleid."
+              wrappingWidth="300" style="-fx-font-size: 10px; -fx-text-fill: #888;"/>
+
+        <!-- Voettekst -->
+        <Text text="© 2023 Co2mpare. Alle rechten." style="-fx-font-size: 10px; -fx-text-fill: #888;"/>
+    </VBox>
 </StackPane>
