@@ -18,7 +18,7 @@ public class InlogController {
     private PasswordField passwordField;  // Wachtwoord veld, moet overeenkomen met de fx:id in de FXML
 
     @FXML
-    private Button loginButton;  // Voeg het veld toe
+    private loginButton loginButton;  // Voeg het veld toe
 
 
     @FXML
