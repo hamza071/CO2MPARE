@@ -5,6 +5,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.control.Button;
 
 public class InlogController {
 
@@ -18,8 +19,7 @@ public class InlogController {
     private PasswordField passwordField;  // Wachtwoord veld, moet overeenkomen met de fx:id in de FXML
 
     @FXML
-    private Button loginButton;  // Voeg het veld toe
-
+    private Button loginButton;  // Voeg de knop hier toe
 
     @FXML
     public void initialize() {
