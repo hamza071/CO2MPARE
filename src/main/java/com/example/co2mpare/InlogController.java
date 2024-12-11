@@ -18,6 +18,10 @@ public class InlogController {
     private PasswordField passwordField;  // Wachtwoord veld, moet overeenkomen met de fx:id in de FXML
 
     @FXML
+    private Button loginButton;  // Voeg het veld toe
+
+
+    @FXML
     public void initialize() {
         // Laad de afbeelding via de controller
         logo.setImage(new Image(getClass().getResourceAsStream("/com/example/co2mpare/logo.png")));
