@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="Eindelijk de rot inlogscherm af nu de anderen :(" />
+    <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="Eindelijk de rot inlogscherm af nu de anderen :(">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +36,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -337,7 +339,39 @@
       <option name="project" value="LOCAL" />
       <updated>1733877862938</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Eindelijk de rot inlogscherm af nu de anderen :(">
+      <option name="closed" value="true" />
+      <created>1733877878366</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1733877878366</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Eindelijk de rot inlogscherm af nu de anderen :(">
+      <option name="closed" value="true" />
+      <created>1733878013069</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1733878013069</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Eindelijk de rot inlogscherm af nu de anderen :(">
+      <option name="closed" value="true" />
+      <created>1733878091945</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1733878091945</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Eindelijk de rot inlogscherm af nu de anderen :(">
+      <option name="closed" value="true" />
+      <created>1733878139369</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1733878139369</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
