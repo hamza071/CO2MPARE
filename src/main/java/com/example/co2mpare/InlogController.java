@@ -23,14 +23,14 @@ public class InlogController {
     private Label errorMessageLabel;  // Foutmelding Label
 
     @FXML
-    private Button loginButton; // Login button toegevoegd
+    private Button loginButton;  // De login knop
 
     @FXML
     public void initialize() {
         // Laad de afbeelding via de controller
         logo.setImage(new Image(getClass().getResourceAsStream("/com/example/co2mpare/logo.png")));
 
-        // Zorg ervoor dat de login-knop is gekoppeld aan de handleLoginButtonClick methode
+        // Voeg de event handler toe voor de login knop
         loginButton.setOnAction(event -> handleLoginButtonClick());
     }
 
