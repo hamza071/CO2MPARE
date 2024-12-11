@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="Eindelijk de rot inlogscherm af nu de anderen :(">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/InlogScherm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/InlogScherm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -267,7 +269,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733876160691</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Eindelijk de rot inlogscherm af nu de anderen :(">
+      <option name="closed" value="true" />
+      <created>1733876387294</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1733876387294</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Eindelijk de rot inlogscherm af nu de anderen :(">
+      <option name="closed" value="true" />
+      <created>1733876493873</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1733876493873</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
