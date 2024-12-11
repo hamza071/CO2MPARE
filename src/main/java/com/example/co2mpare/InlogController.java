@@ -6,7 +6,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Label;
-import javafx.scene.control.Button;
 
 public class InlogController {
 
@@ -23,15 +22,9 @@ public class InlogController {
     private Label errorMessageLabel;  // Foutmelding Label
 
     @FXML
-    private Button loginButton;  // De login knop
-
-    @FXML
     public void initialize() {
         // Laad de afbeelding via de controller
         logo.setImage(new Image(getClass().getResourceAsStream("/com/example/co2mpare/logo.png")));
-
-        // Voeg de event handler toe voor de login knop zonder de 'e' parameter
-        loginButton.setOnAction(event -> handleLoginButtonClick());
     }
 
     // Event handler voor de inlogknop
