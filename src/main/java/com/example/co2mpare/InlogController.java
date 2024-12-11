@@ -31,7 +31,7 @@ public class InlogController {
         logo.setImage(new Image(getClass().getResourceAsStream("/com/example/co2mpare/logo.png")));
 
         // Voeg de event handler toe voor de login knop zonder de 'e' parameter
-        loginButton.setOnAction(actionEvent -> handleLoginButtonClick());
+        loginButton.setOnAction(-> handleLoginButtonClick());
     }
 
     // Event handler voor de inlogknop
