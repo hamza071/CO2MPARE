@@ -6,7 +6,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Label;
-import javafx.scene.control.Button;  // Voeg deze import toe voor de Button
 
 public class InlogController {
 
@@ -23,15 +22,9 @@ public class InlogController {
     private Label errorMessageLabel;  // Foutmelding Label
 
     @FXML
-    private Button loginButton;  // Voeg de verwijzing naar de loginButton toe (fx:id="loginButton")
-
-    @FXML
     public void initialize() {
         // Laad de afbeelding via de controller
         logo.setImage(new Image(getClass().getResourceAsStream("/com/example/co2mpare/logo.png")));
-
-        // Hier kun je de loginButton gebruiken, bijvoorbeeld om extra logica toe te voegen
-        loginButton.setOnAction(event -> handleLoginButtonClick()); // Zorg ervoor dat de actie goed gekoppeld is
     }
 
     // Event handler voor de inlogknop
