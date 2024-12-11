@@ -3,6 +3,7 @@ package com.example.co2mpare;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.Button;  // Zorg ervoor dat Button wordt geïmporteerd
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -16,6 +17,9 @@ public class InlogController {
 
     @FXML
     private PasswordField passwordField;  // Wachtwoord veld, moet overeenkomen met de fx:id in de FXML
+
+    @FXML
+    private Button loginButton;  // Voeg de Button toe met het fx:id "loginButton"
 
     @FXML
     public void initialize() {
