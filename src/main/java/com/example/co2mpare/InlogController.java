@@ -19,9 +19,6 @@ public class InlogController {
     private PasswordField passwordField;  // Wachtwoord veld, moet overeenkomen met de fx:id in de FXML
 
     @FXML
-    private Button loginButton;  // De login knop die wordt gekoppeld via FXML
-
-    @FXML
     private Label errorMessageLabel;  // Foutmelding Label
 
     @FXML
