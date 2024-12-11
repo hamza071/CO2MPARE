@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml">
+    <!-- Hoofdcontainer -->
+    <VBox spacing="10" style="-fx-padding: 20;">
+
+        <!-- Header -->
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-background-color: #999;">
+            <ImageView fitWidth="20" fitHeight="20" preserveRatio="true" />
+            <Text text="CO₂MPARE." style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+        </HBox>
+
+        <!-- Gebruiksstatistieken -->
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <VBox spacing="10" style="-fx-background-color: #ccc; -fx-padding: 10; -fx-background-radius: 10;">
+                <Text text="Today's Usage" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <HBox spacing="20">
+                    <VBox>
+                        <Text text="Energy" style="-fx-font-size: 12px;"/>
+                        <Text text="12 kg" style="-fx-font-size: 14px;"/>
+                    </VBox>
+                    <VBox>
+                        <Text text="Transport" style="-fx-font-size: 12px;"/>
+                        <Text text="8 kg" style="-fx-font-size: 14px;"/>
+                    </VBox>
+                    <VBox>
+                        <Text text="Food" style="-fx-font-size: 12px;"/>
+                        <Text text="5 kg" style="-fx-font-size: 14px;"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <VBox spacing="10" style="-fx-background-color: #ccc; -fx-padding: 10; -fx-background-radius: 10;">
+                <Text text="Yesterday's Usage" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <HBox spacing="20">
+                    <VBox>
+                        <Text text="Energy" style="-fx-font-size: 12px;"/>
+                        <Text text="15 kg" style="-fx-font-size: 14px;"/>
+                    </VBox>
+                    <VBox>
+                        <Text text="Transport" style="-fx-font-size: 12px;"/>
+                        <Text text="7 kg" style="-fx-font-size: 14px;"/>
+                    </VBox>
+                    <VBox>
+                        <Text text="Food" style="-fx-font-size: 12px;"/>
+                        <Text text="6 kg" style="-fx-font-size: 14px;"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </VBox>
+
+        <!-- Diagramsectie -->
+        <VBox spacing="10" style="-fx-background-color: #000; -fx-padding: 10;">
+            <Text text="CO₂ Usage Charts" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            <HBox spacing="20">
+                <ImageView fitWidth="150" fitHeight="100" preserveRatio="true" style="-fx-background-color: gray;"/>
+                <ImageView fitWidth="150" fitHeight="100" preserveRatio="true" style="-fx-background-color: gray;"/>
+            </HBox>
+        </VBox>
+
+        <!-- Voettekst / Navigatie -->
+        <HBox spacing="20" alignment="CENTER" style="-fx-background-color: #555; -fx-padding: 10;">
+            <Button text="Home" style="-fx-background-color: orange; -fx-text-fill: white; -fx-background-radius: 10;"/>
+            <Button text="Stats" style="-fx-background-color: #333; -fx-text-fill: white; -fx-background-radius: 10;"/>
+            <Button text="Settings" style="-fx-background-color: #333; -fx-text-fill: white; -fx-background-radius: 10;"/>
+        </HBox>
+    </VBox>
+</StackPane>

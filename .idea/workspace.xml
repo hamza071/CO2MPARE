@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="zwarte inloggen">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/SettingsScherm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/Settingscontroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/HomeScherm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +69,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hamza\Documents\GitHub\CO2MPARE\src\main\resources\com\example\co2mpare" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.co2mpare" />
     </key>
   </component>
   <component name="RunManager">
@@ -349,7 +353,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733878139369</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="zwarte inloggen">
+      <option name="closed" value="true" />
+      <created>1733910353760</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1733910353760</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,8 +371,8 @@
     <MESSAGE value="inin" />
     <MESSAGE value="zwarte inlog" />
     <MESSAGE value="zwarte inlogg" />
-    <MESSAGE value="zwarte inloggen" />
     <MESSAGE value="Eindelijk de rot inlogscherm af nu de anderen :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eindelijk de rot inlogscherm af nu de anderen :(" />
+    <MESSAGE value="zwarte inloggen" />
+    <option name="LAST_COMMIT_MESSAGE" value="zwarte inloggen" />
   </component>
 </project>
