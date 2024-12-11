@@ -30,8 +30,8 @@ public class InlogController {
         // Laad de afbeelding via de controller
         logo.setImage(new Image(getClass().getResourceAsStream("/com/example/co2mpare/logo.png")));
 
-        // Voeg de event handler toe voor de login knop
-        loginButton.setOnAction(event -> handleLoginButtonClick());
+        // Voeg de event handler toe voor de login knop, zonder 'event' parameter
+        loginButton.setOnAction(e -> handleLoginButtonClick());
     }
 
     // Event handler voor de inlogknop
