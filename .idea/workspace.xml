@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="Eindelijk de rot inlogscherm af nu de anderen :(">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" afterDir="false" />
+    <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="zwarte inloggen">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/SettingsScherm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,13 +36,6 @@
     &quot;accountId&quot;: &quot;95cbe189-3829-42f8-8748-241f0b89299d&quot;
   }
 }</component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -51,6 +52,7 @@
   "keyToString": {
     "Application.InlogApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -59,27 +61,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.qodana",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="QodanaHighlightedReportService">
-    <option name="localRunNotPublishedPersistedInfo">
-      <LocalReportPersistedInfo>
-        <option name="path" value="C:\Users\hamza\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
-        <option name="reportGuid" value="c40a4eec-e757-47f4-b8fe-6c2911ace416" />
-        <option name="reportName" value="CO2MPARE/qodana/2024-12-11" />
-      </LocalReportPersistedInfo>
-    </option>
-  </component>
-  <component name="QodanaIsSelectedPersistenceService">
-    <option name="selectedOrLoading" value="true" />
-  </component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\hamza\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="c40a4eec-e757-47f4-b8fe-6c2911ace416" reportId="CO2MPARE/qodana/2024-12-11" />
-    </option>
-  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hamza\Documents\GitHub\CO2MPARE\src\main\resources\com\example\co2mpare" />
@@ -87,6 +72,7 @@
   </component>
   <component name="RunManager">
     <configuration name="InlogApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-23" />
       <option name="MAIN_CLASS_NAME" value="com.example.co2mpare.InlogApplication" />
       <module name="CO2MPARE" />
       <extension name="coverage">
@@ -104,14 +90,6 @@
         <item itemvalue="Application.InlogApplication" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
