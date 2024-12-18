@@ -24,7 +24,7 @@ public class InlogController {
     @FXML
     public void initialize() {
         // Laad de afbeelding via de controller
-        logo.setImage(new Image(getClass().getResourceAsStream("/com/example/co2mpare/logo.png")));
+        logo.setImage(new Image(getClass().getResourceAsStream("/Images/logo.png")));
     }
 
     // Event handler voor de inlogknop

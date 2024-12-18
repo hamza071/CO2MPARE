@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -22,57 +21,25 @@
         <!-- Instellingen Lijst -->
         <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: #2c2c2c; -fx-background-radius: 10;">
 
-            <!-- Account en Abonnement -->
-            <GridPane hgap="10" style="-fx-padding: 10;" vgap="10">
-                <!-- Rij 1 -->
-                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <ImageView fx:id="accountIcon" fitHeight="20" fitWidth="20" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Account" />
-                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
-                </HBox>
-                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <ImageView fx:id="subscriptionIcon" fitHeight="20" fitWidth="20" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="My subscription" />
-                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
-                </HBox>
-            <columnConstraints>
-               <ColumnConstraints />
-            </columnConstraints>
-            <rowConstraints>
-               <RowConstraints />
-            </rowConstraints>
-            </GridPane>
+            <!-- Account -->
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                <ImageView fx:id="accountIcon" fitHeight="20" fitWidth="20" />
+                <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Account" />
+                <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+            </HBox>
 
-            <!-- Instellingen opties -->
+            <!-- General settings -->
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                <ImageView fx:id="generalSettingsIcon" fitHeight="20" fitWidth="20" />
+                <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="General settings" />
+                <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+            </HBox>
+
+            <!-- Overige Opties -->
             <VBox spacing="10">
-                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <ImageView fx:id="generalSettingsIcon" fitHeight="20" fitWidth="20" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="General settings" />
-                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
-                </HBox>
-                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <ImageView fx:id="privacySettingsIcon" fitHeight="20" fitWidth="20" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Privacy settings" />
-                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
-                </HBox>
-                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <ImageView fx:id="notificationSettingsIcon" fitHeight="20" fitWidth="20" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Notification preferences" />
-                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
-                </HBox>
-                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <ImageView fx:id="appearanceSettingsIcon" fitHeight="20" fitWidth="20" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Appearance settings" />
-                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
-                </HBox>
                 <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
                     <ImageView fx:id="microbitIcon" fitHeight="20" fitWidth="20" />
                     <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Connect with Micro:bit" />
-                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
-                </HBox>
-                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <ImageView fx:id="advancedSettingsIcon" fitHeight="20" fitWidth="20" />
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Advanced settings" />
                     <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
                 </HBox>
             </VBox>
@@ -94,9 +61,10 @@
 
         <!-- Footer Navigatie -->
         <HBox alignment="CENTER" spacing="50" style="-fx-padding: 10; -fx-background-color: #222;">
-            <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px;" text="🏠" />
-            <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px;" text="📊" />
-            <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px;" text="⚙" />
+            <!-- Iconen in de navigatiebalk -->
+            <ImageView fx:id="homeIcon" fitHeight="30" fitWidth="30" />
+            <ImageView fx:id="statsIcon" fitHeight="30" fitWidth="30" />
+            <ImageView fx:id="settingsIcon" fitHeight="30" fitWidth="30" />
         </HBox>
     </VBox>
 </StackPane>
