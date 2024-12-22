@@ -1,17 +1,57 @@
+// Controller: SettingsController.java
 package com.example.co2mpare;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.control.Label;
 
 public class SettingsController {
 
     @FXML
-    private ImageView logo;  // Zorg ervoor dat dit overeenkomt met de fx:id in de FXML
+    private ImageView logo;
 
     @FXML
-    private Button accountButton;  // De knoppen voor de instellingen
+    private ImageView accountIcon;
+
+    @FXML
+    private ImageView generalSettingsIcon;
+
+    @FXML
+    private ImageView microbitIcon;
+
+    @FXML
+    private ImageView helpIcon;
+
+    @FXML
+    private ImageView signOutIcon;
+
+    @FXML
+    private ImageView homeIcon;
+
+    @FXML
+    private ImageView statsIcon;
+
+    @FXML
+    private ImageView settingsIcon;
+
+    @FXML
+    private Label accountLabel;
+
+    @FXML
+    private Label generalSettingsLabel;
+
+    @FXML
+    private Label microbitLabel;
+
+    @FXML
+    private Label helpLabel;
+
+    @FXML
+    private Label signOutLabel;
+
+    @FXML
+    private Button accountButton;
 
     @FXML
     private Button generalSettingsButton;
@@ -26,32 +66,19 @@ public class SettingsController {
     private Button signOutButton;
 
     @FXML
-    private ImageView homeIcon;
-
-    @FXML
-    private ImageView statsIcon;
-
-    @FXML
-    private ImageView settingsIcon;
-
-    // Zorg ervoor dat de initialize() methode wordt aangeroepen bij het laden van de FXML
-    @FXML
     public void initialize() {
-        // Laad de afbeelding via de controller
-        if (logo != null) {
-            logo.setImage(new Image(getClass().getResourceAsStream("/Images/logo.png")));
-        }
+        // Initialization code (if needed)
+    }
 
-        // Event handlers voor knoppen zonder gebruik van events
-        if (accountButton != null) accountButton.setText("Account");
-        if (generalSettingsButton != null) generalSettingsButton.setText("General Settings");
-        if (microbitButton != null) microbitButton.setText("Microbit");
-        if (helpButton != null) helpButton.setText("Help");
-        if (signOutButton != null) signOutButton.setText("Sign Out");
+    // Example method to handle account button click
+    @FXML
+    private void onAccountButtonClick() {
+        System.out.println("Account button clicked");
+    }
 
-        // Event handlers voor de iconen
-        if (homeIcon != null) homeIcon.setOpacity(0.5); // Verandert de zichtbaarheid van het icoon als voorbeeld
-        if (statsIcon != null) statsIcon.setOpacity(0.5);
-        if (settingsIcon != null) settingsIcon.setOpacity(0.5);
+    // Example method to handle sign out button click
+    @FXML
+    private void onSignOutButtonClick() {
+        System.out.println("Sign out button clicked");
     }
 }

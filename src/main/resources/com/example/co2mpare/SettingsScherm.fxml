@@ -1,31 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.image.ImageView?>
+        <?import javafx.scene.layout.ColumnConstraints?>
+        <?import javafx.scene.layout.GridPane?>
+        <?import javafx.scene.layout.HBox?>
+        <?import javafx.scene.layout.StackPane?>
+        <?import javafx.scene.layout.VBox?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.SettingsController">
-    <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #2c3e50;">
+<StackPane style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23">
+    <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;">
 
-        <!-- Logo Section -->
-        <ImageView fx:id="logo" fitWidth="150" fitHeight="150" style="-fx-padding: 10;"/>
+        <!-- Header -->
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: #333;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="CO2MPARE" />
+            <ImageView fx:id="logo" fitHeight="30" fitWidth="30" preserveRatio="true" />
+        </HBox>
 
-        <!-- Navigation Buttons -->
-        <VBox spacing="10">
-            <Button fx:id="accountButton" text="Account" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;"/>
-            <Button fx:id="generalSettingsButton" text="General Settings" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;"/>
-            <Button fx:id="microbitButton" text="Microbit" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;"/>
-            <Button fx:id="helpButton" text="Help" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;"/>
-            <Button fx:id="signOutButton" text="Sign Out" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;"/>
+        <!-- Instellingen Lijst -->
+        <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: #2c2c2c; -fx-background-radius: 10;">
+
+            <!-- Account -->
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                <ImageView fx:id="accountIcon" fitHeight="20" fitWidth="20" />
+                <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Account" />
+                <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+            </HBox>
+
+            <!-- General settings -->
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                <ImageView fx:id="generalSettingsIcon" fitHeight="20" fitWidth="20" />
+                <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="General settings" />
+                <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+            </HBox>
+
+            <!-- Overige Opties -->
+            <VBox spacing="10">
+                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                    <ImageView fx:id="microbitIcon" fitHeight="20" fitWidth="20" />
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Connect with Micro:bit" />
+                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+                </HBox>
+            </VBox>
+
+            <!-- Help en Uitloggen -->
+            <VBox spacing="10">
+                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                    <ImageView fx:id="helpIcon" fitHeight="20" fitWidth="20" />
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Help and support" />
+                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                    <ImageView fx:id="signOutIcon" fitHeight="20" fitWidth="20" />
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Sign out" />
+                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+                </HBox>
+            </VBox>
         </VBox>
 
-        <!-- Icon Section -->
-        <HBox spacing="20">
-            <ImageView fx:id="homeIcon" fitWidth="30" fitHeight="30"/>
-            <ImageView fx:id="statsIcon" fitWidth="30" fitHeight="30"/>
-            <ImageView fx:id="settingsIcon" fitWidth="30" fitHeight="30"/>
+        <!-- Footer Navigatie -->
+        <HBox alignment="CENTER" spacing="50" style="-fx-padding: 10; -fx-background-color: #222;">
+            <!-- Iconen in de navigatiebalk -->
+            <ImageView fx:id="homeIcon" fitHeight="30" fitWidth="30" />
+            <ImageView fx:id="statsIcon" fitHeight="30" fitWidth="30" />
+            <ImageView fx:id="settingsIcon" fitHeight="30" fitWidth="30" />
         </HBox>
     </VBox>
 </StackPane>
