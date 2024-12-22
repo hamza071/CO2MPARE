@@ -6,23 +6,21 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class SettingsApplication extends Application {
 
     @Override
-    public void start(Stage stage) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/co2mpare/SettingsScherm.fxml"));
-            StackPane root = loader.load();
-            Scene scene = new Scene(root, 800, 600);
+    public void start(Stage primaryStage) throws Exception {
+        // Load the FXML file
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SettingsScreen.fxml"));
+        StackPane root = loader.load();
 
-            stage.setTitle("CO2MPARE - Settings");
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // Create a scene
+        Scene scene = new Scene(root, 600, 400);
+
+        // Set the stage
+        primaryStage.setTitle("Settings");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
