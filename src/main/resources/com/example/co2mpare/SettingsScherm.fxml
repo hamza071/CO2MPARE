@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-        <?import javafx.scene.control.Button?>
-        <?import javafx.scene.control.Label?>
-        <?import javafx.scene.image.ImageView?>
-        <?import javafx.scene.layout.ColumnConstraints?>
-        <?import javafx.scene.layout.GridPane?>
-        <?import javafx.scene.layout.HBox?>
-        <?import javafx.scene.layout.StackPane?>
-        <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<StackPane style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23">
+<StackPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;">
 
         <!-- Header -->
@@ -23,14 +23,12 @@
 
             <!-- Account -->
             <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                <ImageView fx:id="accountIcon" fitHeight="20" fitWidth="20" />
                 <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Account" />
                 <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
             </HBox>
 
             <!-- General settings -->
             <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                <ImageView fx:id="generalSettingsIcon" fitHeight="20" fitWidth="20" />
                 <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="General settings" />
                 <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
             </HBox>
@@ -38,7 +36,6 @@
             <!-- Overige Opties -->
             <VBox spacing="10">
                 <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <ImageView fx:id="microbitIcon" fitHeight="20" fitWidth="20" />
                     <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Connect with Micro:bit" />
                     <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
                 </HBox>
@@ -47,12 +44,10 @@
             <!-- Help en Uitloggen -->
             <VBox spacing="10">
                 <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <ImageView fx:id="helpIcon" fitHeight="20" fitWidth="20" />
                     <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Help and support" />
                     <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
                 </HBox>
                 <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <ImageView fx:id="signOutIcon" fitHeight="20" fitWidth="20" />
                     <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Sign out" />
                     <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
                 </HBox>
@@ -62,9 +57,21 @@
         <!-- Footer Navigatie -->
         <HBox alignment="CENTER" spacing="50" style="-fx-padding: 10; -fx-background-color: #222;">
             <!-- Iconen in de navigatiebalk -->
-            <ImageView fx:id="homeIcon" fitHeight="30" fitWidth="30" />
-            <ImageView fx:id="statsIcon" fitHeight="30" fitWidth="30" />
-            <ImageView fx:id="settingsIcon" fitHeight="30" fitWidth="30" />
+            <ImageView fx:id="homeIcon" fitHeight="30" fitWidth="30">
+            <image>
+               <Image url="@../../../Images/home.png" />
+            </image></ImageView>
+            <ImageView fx:id="statsIcon" fitHeight="30" fitWidth="30">
+            <image>
+               <Image url="@../../../Images/stats.png" />
+            </image></ImageView>
+            <ImageView fx:id="settingsIcon" fitHeight="30" fitWidth="30">
+            <image>
+               <Image url="@../../../Images/settings.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="DEFAULT" />
+            </cursor></ImageView>
         </HBox>
     </VBox>
 </StackPane>
