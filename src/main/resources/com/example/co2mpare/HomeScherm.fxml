@@ -1,88 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<StackPane style="-fx-background-color: #1a1a1a;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23">
-    <VBox spacing="10" style="-fx-padding: 15; -fx-pref-width: 250; -fx-pref-height: 600;">
+<StackPane style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml" fx:controller="SettingsController">
+    <!-- Hoofdcontainer -->
+    <VBox spacing="10" style="-fx-padding: 20;">
 
         <!-- Header -->
-        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #333; -fx-padding: 10; -fx-background-radius: 10;">
-            <ImageView fx:id="logo" fitHeight="30" fitWidth="30" preserveRatio="true" />
-            <Label text="CO₂MPARE" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" />
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-background-color: #999;">
+            <ImageView fitWidth="20" fitHeight="20" preserveRatio="true" />
+            <Text text="CO₂MPARE." style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"/>
         </HBox>
 
-        <!-- Main Content -->
+        <!-- Gebruiksstatistieken -->
         <VBox spacing="10" style="-fx-padding: 10;">
-
-            <!-- Usage Section -->
-            <VBox spacing="10">
-                <!-- Today's Usage -->
-                <VBox spacing="5" style="-fx-background-color: #2c2c2c; -fx-background-radius: 10; -fx-padding: 10;">
-                    <Label text="Today's Usage" style="-fx-font-size: 16px; -fx-text-fill: white; -fx-font-weight: bold;" />
-                    <VBox spacing="5">
-                        <Label text="Energy: 12 kg" style="-fx-font-size: 14px; -fx-text-fill: white;" />
-                        <Label text="Transport: 8 kg" style="-fx-font-size: 14px; -fx-text-fill: white;" />
-                        <Label text="Food: 5 kg" style="-fx-font-size: 14px; -fx-text-fill: white;" />
+            <VBox spacing="10" style="-fx-background-color: #ccc; -fx-padding: 10; -fx-background-radius: 10;">
+                <Text text="Today's Usage" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <HBox spacing="20">
+                    <VBox>
+                        <Text text="Energy" style="-fx-font-size: 12px;"/>
+                        <Label fx:id="energyLabel" text="0 kg" style="-fx-font-size: 14px;"/>
                     </VBox>
-                </VBox>
-
-                <!-- Weekly Usage -->
-                <VBox spacing="5" style="-fx-background-color: #2c2c2c; -fx-background-radius: 10; -fx-padding: 10;">
-                    <Label text="Weekly Usage" style="-fx-font-size: 16px; -fx-text-fill: white; -fx-font-weight: bold;" />
-                    <VBox spacing="5">
-                        <Label text="Energy: 90 kg" style="-fx-font-size: 14px; -fx-text-fill: white;" />
-                        <Label text="Transport: 52 kg" style="-fx-font-size: 14px; -fx-text-fill: white;" />
-                        <Label text="Food: 38 kg" style="-fx-font-size: 14px; -fx-text-fill: white;" />
+                    <VBox>
+                        <Text text="Transport" style="-fx-font-size: 12px;"/>
+                        <Label fx:id="transportLabel" text="0 kg" style="-fx-font-size: 14px;"/>
                     </VBox>
-                </VBox>
-
-                <!-- Monthly Usage -->
-                <VBox spacing="5" style="-fx-background-color: #2c2c2c; -fx-background-radius: 10; -fx-padding: 10;">
-                    <Label text="Monthly Usage" style="-fx-font-size: 16px; -fx-text-fill: white; -fx-font-weight: bold;" />
-                    <VBox spacing="5">
-                        <Label text="Energy: 350 kg" style="-fx-font-size: 14px; -fx-text-fill: white;" />
-                        <Label text="Transport: 210 kg" style="-fx-font-size: 14px; -fx-text-fill: white;" />
-                        <Label text="Food: 140 kg" style="-fx-font-size: 14px; -fx-text-fill: white;" />
+                    <VBox>
+                        <Text text="Food" style="-fx-font-size: 12px;"/>
+                        <Label fx:id="foodLabel" text="0 kg" style="-fx-font-size: 14px;"/>
                     </VBox>
-                </VBox>
-            </VBox>
-
-            <!-- Charts -->
-            <VBox spacing="10">
-                <Label text="CO₂ Usage Charts" style="-fx-font-size: 16px; -fx-text-fill: white; -fx-font-weight: bold;" />
-                <VBox spacing="10" alignment="CENTER">
-                    <LineChart fx:id="barChart" style="-fx-pref-width: 200px; -fx-pref-height: 150px;">
-                        <xAxis>
-                            <CategoryAxis />
-                        </xAxis>
-                        <yAxis>
-                            <NumberAxis />
-                        </yAxis>
-                    </LineChart>
-                    <LineChart fx:id="lineChart" style="-fx-pref-width: 200px; -fx-pref-height: 150px;">
-                        <xAxis>
-                            <CategoryAxis />
-                        </xAxis>
-                        <yAxis>
-                            <NumberAxis />
-                        </yAxis>
-                    </LineChart>
-                </VBox>
+                </HBox>
             </VBox>
         </VBox>
 
-        <!-- Footer -->
-        <HBox alignment="CENTER" spacing="50" style="-fx-background-color: #333; -fx-padding: 10; -fx-background-radius: 10;">
-            <Label text="🏠" style="-fx-font-size: 16px; -fx-text-fill: orange;" />
-            <Label text="📊" style="-fx-font-size: 16px; -fx-text-fill: white;" />
-            <Label text="⚙" style="-fx-font-size: 16px; -fx-text-fill: white;" />
+        <!-- Voettekst / Navigatie -->
+        <HBox spacing="20" alignment="CENTER" style="-fx-background-color: #555; -fx-padding: 10;">
+            <Button text="Home" style="-fx-background-color: orange; -fx-text-fill: white; -fx-background-radius: 10;"
+                    onAction="#goToHome"/>
+            <Button text="Stats" style="-fx-background-color: #333; -fx-text-fill: white; -fx-background-radius: 10;"
+                    onAction="#goToStats"/>
+            <Button text="Settings" style="-fx-background-color: #333; -fx-text-fill: white; -fx-background-radius: 10;"
+                    onAction="#goToSettings"/>
         </HBox>
     </VBox>
 </StackPane>

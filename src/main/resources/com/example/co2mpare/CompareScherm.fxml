@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.CompareController">
+    <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;">
+
+        <!-- Header -->
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: #333;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="CO₂MPARE" />
+            <ImageView fx:id="logo" fitHeight="30" fitWidth="30" preserveRatio="true" />
+        </HBox>
+
+        <!-- Leaderboard -->
+        <VBox spacing="10" style="-fx-background-color: #2c2c2c; -fx-padding: 20; -fx-background-radius: 10;">
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;" text="Leaderboard" />
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                <Text fill="WHITE" style="-fx-text-fill: white;" text="1. Alex Johnson" />
+                <Label fx:id="leaderboardLabel1" style="-fx-text-fill: orange;" text="0 kg CO₂" />
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                <Text fill="WHITE" style="-fx-text-fill: white;" text="2. Jamie Lee" />
+                <Label fx:id="leaderboardLabel2" style="-fx-text-fill: orange;" text="0 kg CO₂" />
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                <Text fill="WHITE" style="-fx-text-fill: white;" text="3. Sam Green" />
+                <Label fx:id="leaderboardLabel3" style="-fx-text-fill: orange;" text="0 kg CO₂" />
+            </HBox>
+        </VBox>
+
+        <!-- Insights -->
+        <VBox spacing="10" style="-fx-background-color: #2c2c2c; -fx-padding: 20; -fx-background-radius: 10;">
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;" text="Insights" />
+            <Text fill="WHITE" style="-fx-text-fill: white;" text="Discover how to reduce your emissions with these tips:" />
+            <Text fill="WHITE" style="-fx-text-fill: white;" text="• Use public transportation" />
+            <Text fill="WHITE" style="-fx-text-fill: white;" text="• Limit your meat consumption" />
+            <Text fill="WHITE" style="-fx-text-fill: white;" text="• Switch to energy-efficient appliances" />
+        </VBox>
+
+        <!-- Footer Navigatie -->
+        <HBox alignment="CENTER" spacing="50" style="-fx-padding: 10; -fx-background-color: #222;">
+            <!-- Iconen in de navigatiebalk -->
+            <ImageView fx:id="homeIcon" fitHeight="30" fitWidth="30" />
+            <ImageView fx:id="statsIcon" fitHeight="30" fitWidth="30" />
+            <ImageView fx:id="settingsIcon" fitHeight="30" fitWidth="30" />
+        </HBox>
+    </VBox>
+</StackPane>
