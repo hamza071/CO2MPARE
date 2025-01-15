@@ -78,7 +78,7 @@
       <recent name="com.example.co2mpare" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SettingsApplication">
+  <component name="RunManager" selected="Application.InlogApplication">
     <configuration name="InlogApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-23" />
       <option name="MAIN_CLASS_NAME" value="com.example.co2mpare.InlogApplication" />
@@ -108,8 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SettingsApplication" />
         <item itemvalue="Application.InlogApplication" />
+        <item itemvalue="Application.SettingsApplication" />
       </list>
     </recent_temporary>
   </component>
