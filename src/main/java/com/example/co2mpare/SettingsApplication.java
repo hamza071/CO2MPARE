@@ -11,7 +11,7 @@ public class SettingsApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         // Load the FXML file
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("SettingsScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SettingsScherm.fxml"));
         StackPane root = loader.load();
 
         // Create a scene
