@@ -9,7 +9,6 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.HBox?>
 
 <StackPane fx:controller="com.example.co2mpare.InlogController" xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: black;">
     <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: white; -fx-border-radius: 10px; -fx-border-color: #000; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);">
