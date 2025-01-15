@@ -1,42 +1,46 @@
 package com.example.co2mpare;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
+
+import java.io.IOException;
 
 public class CompareController {
 
     @FXML
-    private ImageView logo;
+    private ImageView homeIcon; // Zorg dat dit overeenkomt met de FXML
 
     @FXML
-    private Label leaderboardLabel1;
+    private ImageView settingsIcon; // Zorg dat dit overeenkomt met de FXML
 
     @FXML
-    private Label leaderboardLabel2;
-
-    @FXML
-    private Label leaderboardLabel3;
-
-    @FXML
-    private ImageView homeIcon;
-
-    @FXML
-    private ImageView statsIcon;
-
-    @FXML
-    private ImageView settingsIcon;
-
-    @FXML
-    public void initialize() {
-        // Initialisatie logica
-        System.out.println("CompareController is geladen.");
-
-        // Voorbeeldwaarden instellen
-        leaderboardLabel1.setText("10 kg CO₂");
-        leaderboardLabel2.setText("7 kg CO₂");
-        leaderboardLabel3.setText("5 kg CO₂");
+    public void goToHome() {
+        navigateTo("/com/example/co2mpare/HomeScherm.fxml", "Home");
     }
 
+    @FXML
+    public void goToSettings() {
+        navigateTo("/com/example/co2mpare/SettingsScherm.fxml", "Settings");
+    }
 
+    private void navigateTo(String fxmlPath, String title) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent root = loader.load();
+
+            // Haal de huidige stage op via een bestaand FXML-element
+            Stage stage = (Stage) homeIcon.getScene().getWindow();
+
+            // Stel de nieuwe scène in
+            stage.setScene(new Scene(root));
+            stage.setTitle(title);
+            stage.show();
+        } catch (IOException e) {
+            System.err.println("Fout bij het laden van FXML-bestand: " + fxmlPath);
+        }
+    }
 }

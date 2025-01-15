@@ -56,7 +56,7 @@ public class InlogController {
         } else if (password.isEmpty()) {
             passwordField.setStyle("-fx-border-color: red;");
             errorMessageLabel.setText("Vul een wachtwoord in.");
-        } else if (username.equals("Skibidi") && password.equals("Toilets")) {
+        } else if (username.equals("t") && password.equals("t")) {
             System.out.println("Inloggen succesvol!");
             navigateToHome();
         } else {
