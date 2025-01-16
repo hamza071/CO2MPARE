@@ -13,6 +13,9 @@ import javafx.stage.Stage;
 
 public class InlogController {
 
+    private static final double WINDOW_WIDTH = 375; // Breedte in pixels
+    private static final double WINDOW_HEIGHT = 667; // Hoogte in pixels
+
     @FXML
     private ImageView logo;
 
@@ -44,12 +47,10 @@ public class InlogController {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        // Reset foutmeldingen en veldstijlen
         usernameField.setStyle("-fx-border-color: #ddd;");
         passwordField.setStyle("-fx-border-color: #ddd;");
         errorMessageLabel.setText("");
 
-        // Validatie
         if (username.isEmpty()) {
             usernameField.setStyle("-fx-border-color: red;");
             errorMessageLabel.setText("Vul een gebruikersnaam in.");
@@ -69,16 +70,11 @@ public class InlogController {
 
     private void navigateToHome() {
         try {
-            // Laad HomeScherm.fxml
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/co2mpare/HomeScherm.fxml"));
             Parent root = loader.load();
 
-            // Haal de huidige stage op
             Stage stage = (Stage) usernameField.getScene().getWindow();
-
-            // Stel de nieuwe scène in
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
+            stage.setScene(new Scene(root, WINDOW_WIDTH, WINDOW_HEIGHT));
             stage.setTitle("Home");
         } catch (Exception e) {
             System.err.println("Fout bij navigatie naar HomeScherm: " + e.getMessage());

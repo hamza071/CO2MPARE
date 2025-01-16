@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.HomeController">
-    <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;">
-
+<StackPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.HomeController"
+           prefWidth="375" prefHeight="667">
+    <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;" prefWidth="375" prefHeight="667">
         <!-- Header -->
-        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: #333;">
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: #333;" prefWidth="375">
             <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="CO₂MPARE" />
             <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
                 <image>
@@ -22,10 +22,9 @@
         </HBox>
 
         <!-- Usage Sections -->
-        <VBox spacing="15" style="-fx-padding: 20;">
-
+        <VBox spacing="15" style="-fx-padding: 20;" prefWidth="335">
             <!-- Today Usage -->
-            <VBox spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 15; -fx-background-radius: 10;">
+            <VBox spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 15; -fx-background-radius: 10;" prefWidth="335">
                 <Label text="Today's Usage" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;" />
                 <HBox spacing="20" alignment="CENTER">
                     <VBox alignment="CENTER">
@@ -40,7 +39,7 @@
             </VBox>
 
             <!-- Yesterday Usage -->
-            <VBox spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 15; -fx-background-radius: 10;">
+            <VBox spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 15; -fx-background-radius: 10;" prefWidth="335">
                 <Label text="Yesterday's Usage" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;" />
                 <HBox spacing="20" alignment="CENTER">
                     <VBox alignment="CENTER">
@@ -55,7 +54,7 @@
             </VBox>
 
             <!-- Weekly Usage -->
-            <VBox spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 15; -fx-background-radius: 10;">
+            <VBox spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 15; -fx-background-radius: 10;" prefWidth="335">
                 <Label text="Weekly Usage" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;" />
                 <HBox spacing="20" alignment="CENTER">
                     <VBox alignment="CENTER">
@@ -70,7 +69,7 @@
             </VBox>
 
             <!-- Monthly Usage -->
-            <VBox spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 15; -fx-background-radius: 10;">
+            <VBox spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 15; -fx-background-radius: 10;" prefWidth="335">
                 <Label text="Monthly Usage" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;" />
                 <HBox spacing="20" alignment="CENTER">
                     <VBox alignment="CENTER">
@@ -85,8 +84,10 @@
             </VBox>
         </VBox>
 
+        <Region fx:id="spacer" VBox.vgrow="ALWAYS" />
+
         <!-- Footer Navigatie -->
-        <HBox alignment="CENTER" spacing="50" style="-fx-padding: 10; -fx-background-color: #222;">
+        <HBox alignment="CENTER" spacing="50" style="-fx-padding: 10; -fx-background-color: #222;" prefWidth="375" prefHeight="50">
             <ImageView fitHeight="30" fitWidth="30" onMouseClicked="#goToHome">
                 <image>
                     <Image url="@../../../Images/home.png" />
