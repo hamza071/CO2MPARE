@@ -10,6 +10,7 @@ module com.example.co2mpare {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     // Open de com.example.co2mpare package voor JavaFX zodat FXML-bestanden geladen kunnen worden
     opens com.example.co2mpare to javafx.fxml;
