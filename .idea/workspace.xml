@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="koppeling tussen alles">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/RegistrerenApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/RegistrerenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/RegistrerenScherm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/DataReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/DataReceiver.java" afterDir="false" />
-    </list>
+    <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="registreren" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -493,7 +487,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737332490922</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="registreren">
+      <option name="closed" value="true" />
+      <created>1737375699512</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1737375699512</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +523,8 @@
     <MESSAGE value="koppeling" />
     <MESSAGE value="koppeling tussen settings naarn inlog" />
     <MESSAGE value="koppeling tussen alles" />
-    <option name="LAST_COMMIT_MESSAGE" value="koppeling tussen alles" />
+    <MESSAGE value="registreren" />
+    <option name="LAST_COMMIT_MESSAGE" value="registreren" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
