@@ -8,13 +8,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 public class DataReceiver {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/verbruikapp";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "hamza";
 
     private static final String PI_HOST = "192.168.1.151";
     private static final String PI_USER = "hamza";
-    private static final String PI_SCRIPT = "python3 /home/hamza/slimme_meter.py";
+    private static final String PI_SCRIPT = "source /home/hamza/myenv/bin/activate && python3 /home/hamza/slimme_meter.py";
 
     public static void main(String[] args) {
         try {
@@ -45,7 +45,7 @@ public class DataReceiver {
 
             while ((bytesRead = in.read(buffer)) != -1) {
                 String output = new String(buffer, 0, bytesRead);
-                System.out.print(output);
+                System.out.print(output); // Print ontvangen data in de console
                 data.append(output);
             }
 
