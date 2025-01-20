@@ -8,7 +8,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 public class DataReceiver {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/verbruikapp";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "hamza";
 
