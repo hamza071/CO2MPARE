@@ -11,10 +11,10 @@ module com.example.co2mpare {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires jsch;
 
-    // Open de com.example.co2mpare package voor JavaFX zodat FXML-bestanden geladen kunnen worden
-    opens com.example.co2mpare to javafx.fxml;
 
     // Exporteer de com.example.co2mpare package zodat andere modules toegang hebben
     exports com.example.co2mpare;
+    opens com.example.co2mpare to javafx.fxml, java.sql;
 }
