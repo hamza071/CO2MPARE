@@ -28,11 +28,11 @@
                 <HBox alignment="CENTER" spacing="20">
                     <VBox alignment="CENTER">
                         <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Energy" />
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="12 kg" />
+                        <Label fx:id="todayEnergyLabel" style="-fx-font-size: 14px; -fx-text-fill: white;" text="0.00 kg" />
                     </VBox>
                     <VBox alignment="CENTER">
                         <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Gas" />
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="8 kg" />
+                        <Label fx:id="todayGasLabel" style="-fx-font-size: 14px; -fx-text-fill: white;" text="0.00 kg" />
                     </VBox>
                 </HBox>
             </VBox>
@@ -43,11 +43,11 @@
                 <HBox alignment="CENTER" spacing="20">
                     <VBox alignment="CENTER">
                         <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Energy" />
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="15 kg" />
+                        <Label fx:id="yesterdayEnergyLabel" style="-fx-font-size: 14px; -fx-text-fill: white;" text="0.00 kg" />
                     </VBox>
                     <VBox alignment="CENTER">
                         <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Gas" />
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="7 kg" />
+                        <Label fx:id="yesterdayGasLabel" style="-fx-font-size: 14px; -fx-text-fill: white;" text="0.00 kg" />
                     </VBox>
                 </HBox>
             </VBox>
@@ -58,11 +58,11 @@
                 <HBox alignment="CENTER" spacing="20">
                     <VBox alignment="CENTER">
                         <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Energy" />
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="90 kg" />
+                        <Label fx:id="weeklyEnergyLabel" style="-fx-font-size: 14px; -fx-text-fill: white;" text="0.00 kg" />
                     </VBox>
                     <VBox alignment="CENTER">
                         <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Gas" />
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="52 kg" />
+                        <Label fx:id="weeklyGasLabel" style="-fx-font-size: 14px; -fx-text-fill: white;" text="0.00 kg" />
                     </VBox>
                 </HBox>
             </VBox>
@@ -73,11 +73,11 @@
                 <HBox alignment="CENTER" spacing="20">
                     <VBox alignment="CENTER">
                         <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Energy" />
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="350 kg" />
+                        <Label fx:id="monthlyEnergyLabel" style="-fx-font-size: 14px; -fx-text-fill: white;" text="0.00 kg" />
                     </VBox>
                     <VBox alignment="CENTER">
                         <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Gas" />
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="210 kg" />
+                        <Label fx:id="monthlyGasLabel" style="-fx-font-size: 14px; -fx-text-fill: white;" text="0.00 kg" />
                     </VBox>
                 </HBox>
             </VBox>

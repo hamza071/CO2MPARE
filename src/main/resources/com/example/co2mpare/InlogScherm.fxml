@@ -33,7 +33,7 @@
         <!-- Inlogknop -->
         <VBox spacing="10" alignment="CENTER">
             <Button text="Inloggen" style="-fx-background-color: #4B6EF5; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 5;" onAction="#handleLoginButtonClick"/>
-            <Button text="Registreren" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 5;"/>
+            <Button text="Registreren" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 5;" onAction="#handleRegisterButtonClick"/>
         </VBox>
 
         <!-- Toestemming -->
