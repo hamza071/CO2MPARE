@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:controller="com.example.co2mpare.RegistrerenController" xmlns:fx="http://javafx.com/fxml" prefHeight="667" prefWidth="375" style="-fx-background-color: black;">
-    <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: white; -fx-border-radius: 10px; -fx-border-color: #000; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);">
+<StackPane prefHeight="667" prefWidth="375" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.co2mpare.RegistrerenController">
+    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20; -fx-background-color: white; -fx-border-radius: 10px; -fx-border-color: #000; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);">
 
         <!-- Titel -->
-        <Text text="Registreren bij Co2mpare" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #000;" />
-        <Text text="Maak een account aan en begin je koolstofvoetafdruk bij te houden." wrappingWidth="300" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+        <Text style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #000;" text="Registreren bij Co2mpare" />
+        <Text style="-fx-font-size: 14px; -fx-text-fill: #555;" text="Maak een account aan en begin je koolstofvoetafdruk bij te houden." wrappingWidth="300" />
 
         <!-- E-mail -->
         <TextField fx:id="emailField" promptText="E-mail" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #ddd;" />
@@ -31,14 +31,16 @@
         <!-- Succesmelding Label -->
         <Label fx:id="successMessageLabel" style="-fx-text-fill: green; -fx-font-size: 12px;" />
 
-        <!-- Registratieknop -->
-        <Button text="Registreren" style="-fx-background-color: #4B6EF5; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 5;" onAction="#handleRegisterButtonClick" />
+        <!-- Knoppen -->
+        <HBox alignment="CENTER" spacing="10">
+            <Button onAction="#handleRegisterButtonClick" style="-fx-background-color: #4B6EF5; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 40; -fx-border-radius: 5;" text="Registreren" />
+            <Button onAction="#goToLogin" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 40; -fx-border-radius: 5;" text="Inloggen" />
+        </HBox>
 
         <!-- Toestemming -->
-        <Text text="Door aan te melden, ga je akkoord met onze Algemene Voorwaarden en Privacybeleid."
-              wrappingWidth="300" style="-fx-font-size: 10px; -fx-text-fill: #888;" />
+        <Text style="-fx-font-size: 10px; -fx-text-fill: #888;" text="Door aan te melden, ga je akkoord met onze Algemene Voorwaarden en Privacybeleid." wrappingWidth="300" />
 
         <!-- Voettekst -->
-        <Text text="© 2023 Co2mpare. Alle rechten." style="-fx-font-size: 10px; -fx-text-fill: #888;" />
+        <Text style="-fx-font-size: 10px; -fx-text-fill: #888;" text="© 2023 Co2mpare. Alle rechten." />
     </VBox>
 </StackPane>

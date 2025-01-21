@@ -1,9 +1,13 @@
 package com.example.co2mpare;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -30,6 +34,10 @@ public class RegistrerenController {
     private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "hamza";
+
+    // Schermgrootte
+    private static final double WINDOW_WIDTH = 375;
+    private static final double WINDOW_HEIGHT = 667;
 
     @FXML
     private void handleRegisterButtonClick() {
@@ -91,6 +99,20 @@ public class RegistrerenController {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    @FXML
+    private void goToLogin() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/co2mpare/InlogScherm.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) emailField.getScene().getWindow();
+            stage.setScene(new Scene(root, WINDOW_WIDTH, WINDOW_HEIGHT));
+            stage.setTitle("Inloggen");
+        } catch (Exception e) {
+            System.err.println("Fout bij navigatie naar inlogpagina: " + e.getMessage());
         }
     }
 }

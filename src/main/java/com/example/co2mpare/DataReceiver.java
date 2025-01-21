@@ -1,6 +1,8 @@
 package com.example.co2mpare;
 
+import com.jcraft.jsch.*;
 import java.io.BufferedReader;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
@@ -8,123 +10,153 @@ import java.net.Socket;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.time.LocalDateTime;
 
 public class DataReceiver {
 
+    // Database-instellingen
     private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "hamza";
 
-    // Dynamisch account ID, standaardwaarde -1 (geen account ingelogd)
-    private static int loggedInAccountId = 1;
+    // Raspberry Pi-verbinding instellingen
+    private static final String PI_HOST = "192.168.1.151";
+    private static final String PI_USER = "hamza";
+    private static final String PI_SCRIPT = "source /home/hamza/myenv/bin/activate && python3 /home/hamza/slimme_meter.py";
 
-    // Variabelen voor het bijhouden van hoogste waarden binnen 5 seconden
-    private static double maxElectricityUsage = 0;
-    private static double maxGasUsage = 0;
+    // Variabele om ingelogde account ID op te slaan
+    private static int loggedInAccountId = -1;
 
+    // Timestamps voor bijhouden van updates
+    private static LocalDateTime lastGasUpdate = LocalDateTime.MIN;
+    private static LocalDateTime lastElectricityUpdate = LocalDateTime.MIN;
+
+    // Methode om het ingelogde account ID in te stellen
     public static void setLoggedInAccountId(int accountId) {
         loggedInAccountId = accountId;
     }
 
+    // Methode om het ingelogde account ID op te halen
     public static int getLoggedInAccountId() {
         return loggedInAccountId;
     }
 
+    // Hoofdprogramma
     public static void main(String[] args) {
+        // Controleer of een gebruiker is ingelogd
         if (loggedInAccountId == -1) {
-            System.err.println("Geen gebruiker is ingelogd. Kan geen data koppelen.");
-            return;
+            return; // Stop als er geen gebruiker is ingelogd
         }
 
-        System.out.println("Ingelogd account ID: " + loggedInAccountId);
+        // Start zowel SSH-verbinding als serversocket in aparte threads
+        new Thread(DataReceiver::startSSHConnection).start();
+        new Thread(DataReceiver::startServerSocket).start();
+    }
 
+    // SSH-verbinding met Raspberry Pi maken en script uitvoeren
+    private static void startSSHConnection() {
+        try {
+            // Maak een SSH-sessie aan
+            JSch jsch = new JSch();
+            Session session = jsch.getSession(PI_USER, PI_HOST, 22);
+            session.setConfig("StrictHostKeyChecking", "no");
+            session.setPassword("hamza");
+            session.connect();
+
+            // Voer het script op de Raspberry Pi uit
+            ChannelExec channel = (ChannelExec) session.openChannel("exec");
+            channel.setCommand(PI_SCRIPT);
+            channel.setInputStream(null);
+            channel.setErrStream(System.err);
+
+            InputStream in = channel.getInputStream();
+            channel.connect();
+
+            // Lezen van eventuele uitvoer van het script
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+            while (reader.readLine() != null) {
+                // Verwerken van de uitvoer (indien nodig)
+            }
+
+            // Sluit de SSH-sessie
+            channel.disconnect();
+            session.disconnect();
+        } catch (Exception ignored) {
+            // Fouten worden genegeerd
+        }
+    }
+
+    // Serversocket opzetten om data te ontvangen
+    private static void startServerSocket() {
         try (ServerSocket serverSocket = new ServerSocket(5000)) {
-            System.out.println("Server luistert op poort 5000...");
-
-            // Tijd bijhouden om elke 5 seconden de data op te slaan
-            long lastSaveTime = System.currentTimeMillis();
-
             while (true) {
+                // Wacht op een inkomende verbinding
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("Verbonden met: " + clientSocket.getInetAddress());
 
                 try (BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                      PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true)) {
 
-                    // Lees data van de client
-                    String rawData = in.readLine();
-                    System.out.println("Ontvangen data: " + rawData);
-
-                    // Verwerk de ontvangen data
-                    updateMaxValues(rawData);
-
-                    // Controleer of het tijd is om de hoogste waarden op te slaan
-                    long currentTime = System.currentTimeMillis();
-                    if (currentTime - lastSaveTime >= 5000) {
-                        saveToDatabase();
-                        lastSaveTime = currentTime;
+                    // Lees de ontvangen data van de client
+                    StringBuilder rawData = new StringBuilder();
+                    String line;
+                    while ((line = in.readLine()) != null) {
+                        rawData.append(line).append("\n");
                     }
 
+                    // Verwerk en sla de ontvangen data op
+                    processAndSaveData(rawData.toString());
                     out.println("Data succesvol ontvangen en verwerkt.");
-
-                } catch (Exception e) {
-                    System.err.println("Fout bij het verwerken van clientgegevens: " + e.getMessage());
-                } finally {
-                    clientSocket.close();
+                } catch (Exception ignored) {
+                    // Fouten bij het verwerken van clientgegevens worden genegeerd
                 }
             }
-        } catch (Exception e) {
-            System.err.println("Fout bij het opzetten van de server:");
-            e.printStackTrace();
+        } catch (Exception ignored) {
+            // Fouten bij het opzetten van de server worden genegeerd
         }
     }
 
-    private static void updateMaxValues(String rawData) {
-        try {
-            String[] values = rawData.split("\\|");
+    // Verwerkt de ontvangen data en slaat deze op in de database
+    private static void processAndSaveData(String rawData) {
+        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
+            // Parse de ontvangen data
+            String[] values = rawData.trim().split("\\|");
             if (values.length != 2) {
-                System.err.println("Ongeldig dataformaat: " + rawData);
-                return;
+                return; // Ongeldige data-indeling
             }
 
-            double currentElectricityUsage = Double.parseDouble(values[0]); // kWh
-            double currentGasUsage = Double.parseDouble(values[1]); // m³
+            // Haal elektriciteits- en gasgebruik op uit de data
+            double electricityUsage = Double.parseDouble(values[0]);
+            double gasUsage = Double.parseDouble(values[1]);
 
-            // Update de maximale waarden
-            maxElectricityUsage = Math.max(maxElectricityUsage, currentElectricityUsage);
-            maxGasUsage = Math.max(maxGasUsage, currentGasUsage);
+            // Bereken de CO2-uitstoot
+            double electricityCO2 = electricityUsage * 0.475; // CO2 per kWh
+            double gasCO2 = gasUsage * 1.884; // CO2 per m³
 
-            System.out.printf("Huidige hoogste elektriciteit: %.2f kWh, gas: %.2f m³%n", maxElectricityUsage, maxGasUsage);
-        } catch (NumberFormatException e) {
-            System.err.println("Fout bij het parsen van numerieke waarden: " + rawData);
-        }
-    }
+            // Controleer of voldoende tijd verstreken is sinds laatste update
+            LocalDateTime now = LocalDateTime.now();
+            boolean saveElectricity = now.isAfter(lastElectricityUpdate.plusMinutes(15));
+            boolean saveGas = now.isAfter(lastGasUpdate.plusHours(1));
 
-    private static void saveToDatabase() {
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
-            System.out.println("Opslaan van de hoogste waarden in de database...");
+            if (!saveElectricity && !saveGas) {
+                return; // Sla geen data op als het tijdsinterval niet is verstreken
+            }
 
-            // Zet gebruik om naar CO2
-            double electricityCO2 = maxElectricityUsage * 0.475; // kg CO₂ per kWh
-            double gasCO2 = maxGasUsage * 1.884; // kg CO₂ per m³
-
+            // Sla de data op in de database
             String query = "INSERT INTO usage_data (account_id, date, gas_usage_kg, electricity_usage_kg) VALUES (?, NOW(), ?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setInt(1, loggedInAccountId);
-            statement.setDouble(2, gasCO2); // Gasgebruik in CO2
-            statement.setDouble(3, electricityCO2); // Elektriciteitgebruik in CO2
+            statement.setDouble(2, saveGas ? gasCO2 : 0);
+            statement.setDouble(3, saveElectricity ? electricityCO2 : 0);
 
+            // Voer de database-insert uit
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) {
-                System.out.println("Data succesvol opgeslagen in de database!");
+                // Update de tijdstempels als de data succesvol is opgeslagen
+                if (saveElectricity) lastElectricityUpdate = now;
+                if (saveGas) lastGasUpdate = now;
             }
-
-            // Reset de maximale waarden na opslag
-            maxElectricityUsage = 0;
-            maxGasUsage = 0;
-        } catch (Exception e) {
-            System.err.println("Fout bij het opslaan van data:");
-            e.printStackTrace();
+        } catch (Exception ignored) {
+            // Fouten bij het verwerken en opslaan van data worden genegeerd
         }
     }
 }

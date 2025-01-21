@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<StackPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.CompareController"
-           prefWidth="375" prefHeight="667">
-    <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;" prefWidth="375" prefHeight="667">
+<StackPane prefHeight="667" prefWidth="375" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.CompareController">
+    <VBox alignment="TOP_CENTER" prefHeight="667" prefWidth="375" spacing="10" style="-fx-padding: 20;">
         <!-- Header -->
-        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: #333;" prefWidth="375">
+        <HBox alignment="CENTER" prefWidth="375" spacing="10" style="-fx-padding: 10; -fx-background-color: #333;">
             <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="CO₂MPARE" />
             <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
                 <image>
@@ -22,25 +17,19 @@
             </ImageView>
         </HBox>
 
-        <!-- Leaderboard -->
-        <VBox spacing="10" style="-fx-background-color: #2c2c2c; -fx-padding: 20; -fx-background-radius: 10;" prefWidth="335">
+        <!-- Leaderboard Table -->
+        <VBox prefWidth="335" spacing="10" style="-fx-background-color: #2c2c2c; -fx-padding: 20; -fx-background-radius: 10;">
             <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;" text="Leaderboard" />
-            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                <Text style="-fx-text-fill: white;" text="1. Alex Johnson" />
-                <Label style="-fx-text-fill: orange;" text="0 kg CO₂" />
-            </HBox>
-            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                <Text style="-fx-text-fill: white;" text="2. Jamie Lee" />
-                <Label style="-fx-text-fill: orange;" text="0 kg CO₂" />
-            </HBox>
-            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                <Text style="-fx-text-fill: white;" text="3. Sam Green" />
-                <Label style="-fx-text-fill: orange;" text="0 kg CO₂" />
-            </HBox>
+            <TableView fx:id="leaderboardTable" style="-fx-background-color: #2c2c2c; -fx-padding: 5;">
+                <columns>
+                    <TableColumn fx:id="emailColumn" prefWidth="200" text="Gebruiker" />
+                    <TableColumn fx:id="totalCO2Column" prefWidth="135" text="Total CO₂ (kg)" />
+                </columns>
+            </TableView>
         </VBox>
 
         <!-- Insights -->
-        <VBox spacing="10" style="-fx-background-color: #2c2c2c; -fx-padding: 20; -fx-background-radius: 10;" prefWidth="335">
+        <VBox prefWidth="335" spacing="10" style="-fx-background-color: #2c2c2c; -fx-padding: 20; -fx-background-radius: 10;">
             <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;" text="Insights" />
             <Text style="-fx-text-fill: white;" text="Discover how to reduce your emissions with these tips:" />
             <Text style="-fx-text-fill: white;" text="• Use public transportation" />
@@ -51,7 +40,7 @@
         <Region fx:id="spacer" VBox.vgrow="ALWAYS" />
 
         <!-- Footer Navigatie -->
-        <HBox alignment="CENTER" spacing="50" style="-fx-padding: 10; -fx-background-color: #222;" prefWidth="375" prefHeight="50">
+        <HBox alignment="CENTER" prefHeight="50" prefWidth="375" spacing="50" style="-fx-padding: 10; -fx-background-color: #222;">
             <ImageView fx:id="homeIcon" fitHeight="30" fitWidth="30" onMouseClicked="#goToHome">
                 <image>
                     <Image url="@../../../Images/home.png" />
