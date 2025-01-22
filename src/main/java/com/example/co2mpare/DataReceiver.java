@@ -25,7 +25,7 @@ public class DataReceiver {
     private static final String PI_SCRIPT = "source /home/hamza/myenv/bin/activate && python3 /home/hamza/slimme_meter.py";
 
     // Variabele om ingelogde account ID op te slaan
-    private static int loggedInAccountId = -1;
+    private static int loggedInAccountId = 1;
 
     // Timestamps voor bijhouden van updates
     private static LocalDateTime lastGasUpdate = LocalDateTime.MIN;
