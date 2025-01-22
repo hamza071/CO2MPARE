@@ -21,7 +21,7 @@ public class HomeController {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "hamza";
+    private static final String DB_PASSWORD = "Aidee123!";
 
     // Labels om de data weer te geven
     @FXML

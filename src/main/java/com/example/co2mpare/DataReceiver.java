@@ -17,7 +17,7 @@ public class DataReceiver {
     // Database-instellingen
     private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "hamza";
+    private static final String DB_PASSWORD = "Aidee123!";
 
     // Raspberry Pi-verbinding instellingen
     private static final String PI_HOST = "192.168.1.151";
@@ -25,7 +25,7 @@ public class DataReceiver {
     private static final String PI_SCRIPT = "source /home/hamza/myenv/bin/activate && python3 /home/hamza/slimme_meter.py";
 
     // Variabele om ingelogde account ID op te slaan
-    private static int loggedInAccountId = 1;
+    private static int loggedInAccountId = -1;
 
     // Timestamps voor bijhouden van updates
     private static LocalDateTime lastGasUpdate = LocalDateTime.MIN;
