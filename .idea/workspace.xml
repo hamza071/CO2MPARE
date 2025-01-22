@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="registreren">
+    <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/CompareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/CompareController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/DataReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/DataReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/RegistrerenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/RegistrerenController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -510,7 +507,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737427345540</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="change">
+      <option name="closed" value="true" />
+      <created>1737541373697</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1737541373697</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +544,8 @@
     <MESSAGE value="koppeling tussen settings naarn inlog" />
     <MESSAGE value="koppeling tussen alles" />
     <MESSAGE value="registreren" />
-    <option name="LAST_COMMIT_MESSAGE" value="registreren" />
+    <MESSAGE value="change" />
+    <option name="LAST_COMMIT_MESSAGE" value="change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
