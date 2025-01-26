@@ -15,7 +15,7 @@ public class DataReceiver {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "Aidee123!";
+    private static final String DB_PASSWORD = "Co2mpare!";
 
     private static final String PI_HOST = "192.168.1.151";
     private static final String PI_USER = "hamza";

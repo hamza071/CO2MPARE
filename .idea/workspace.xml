@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/CompareApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/CompareApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/CompareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/CompareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/DataReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/DataReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/RegistrerenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/RegistrerenController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +37,12 @@
     &quot;assignee&quot;: &quot;Oguzhan070&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/hamza071/CO2MPARE.git&quot;,
-    &quot;accountId&quot;: &quot;9b6172a8-f212-479f-8792-f1dfafbfecb0&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/hamza071/CO2MPARE.git",
+    "accountId": "ddb7c513-dab4-4442-8f1f-a3fb6cdfb8dd"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/co2mpare/InlogApplication.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -93,7 +99,7 @@
       <recent name="com.example.co2mpare" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DatabaseTest">
+  <component name="RunManager" selected="Application.InlogApplication">
     <configuration name="DatabaseTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
       <module name="CO2MPARE" />
@@ -552,7 +558,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/co2mpare/CompareApplication.java</url>
           <line>14</line>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
