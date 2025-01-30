@@ -23,7 +23,7 @@ public class InlogController {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "Co2mpare!";
+    private static final String DB_PASSWORD = "Aidee123!";
 
     @FXML
     private ImageView logo;
