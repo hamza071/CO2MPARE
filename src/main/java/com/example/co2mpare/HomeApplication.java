@@ -15,7 +15,7 @@ public class HomeApplication extends Application {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/co2mpare/HomeScherm.fxml"));
             Parent root = loader.load();
 
-            // Maak een nieuwe scene
+            // Maak een nieuwe scen
             Scene scene = new Scene(root);
 
             // Stel de primary stage in
