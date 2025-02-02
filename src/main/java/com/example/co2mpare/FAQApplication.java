@@ -6,15 +6,15 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class SettingsApplication extends Application {
+public class FAQApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("SettingsScherm.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FAQScherm.fxml"));
         StackPane root = loader.load();
+        Scene scene = new Scene(root, 375, 667);
 
-        Scene scene = new Scene(root, 600, 400);
-        primaryStage.setTitle("Settings");
+        primaryStage.setTitle("FAQ");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

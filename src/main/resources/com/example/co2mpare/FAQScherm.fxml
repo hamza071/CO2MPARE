@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="667" prefWidth="375" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.FAQController">
+
+    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30; -fx-background-color: #2c2c2c; -fx-background-radius: 10;">
+
+        <!-- FAQ Titel -->
+        <Label style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold; -fx-alignment: center;" text="FAQ" />
+
+        <!-- Informatieblok -->
+        <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: #3c3c3c; -fx-background-radius: 10;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Aansluiting" />
+            <Label wrapText="true" style="-fx-text-fill: white; -fx-font-size: 14px;"
+                   text="Het aansluiten van ons product gaat simpel via een P1-kabel,
+                         waarvoor een poort beschikbaar is in uw slimme meterkast.
+                         Zorg ervoor dat uw slimme meter compatibel is met P1 voor een correcte werking." />
+        </VBox>
+
+        <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: #3c3c3c; -fx-background-radius: 10;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Veelgestelde vragen" />
+            <Label wrapText="true" style="-fx-text-fill: white; -fx-font-size: 14px;"
+                   text="Heeft u problemen met de installatie? Raadpleeg onze handleiding of neem contact op met onze klantenservice." />
+        </VBox>
+
+        <!-- Terug Knop -->
+        <Button text="Terug naar Instellingen" onMouseClicked="#goToSettings"
+                style="-fx-background-color: #555; -fx-text-fill: white; -fx-font-size: 14px;
+                       -fx-padding: 10 20; -fx-background-radius: 5;" />
+
+    </VBox>
+
+</StackPane>

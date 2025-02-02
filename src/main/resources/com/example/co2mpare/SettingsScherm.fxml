@@ -10,8 +10,13 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane prefHeight="667" prefWidth="375" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.SettingsController">
+<StackPane prefHeight="667" prefWidth="375" style="-fx-background-color: black;"
+           xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.co2mpare.SettingsController">
+
     <VBox alignment="TOP_CENTER" prefHeight="667" prefWidth="375" spacing="10" style="-fx-padding: 20;">
+
         <!-- Header -->
         <HBox alignment="CENTER" prefWidth="375" spacing="10" style="-fx-padding: 10; -fx-background-color: #333;">
             <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="CO₂MPARE" />
@@ -24,42 +29,30 @@
 
         <!-- Instellingen Lijst -->
         <VBox prefWidth="335" spacing="15" style="-fx-padding: 20; -fx-background-color: #2c2c2c; -fx-background-radius: 10;">
-            <!-- Account -->
+
+            <!-- FAQ knop -->
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+                <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="FAQ" />
+                <Button onMouseClicked="#goToFAQ" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+            </HBox>
+
+            <!-- Andere instellingen -->
             <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
                 <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Coming soon..." />
                 <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
             </HBox>
 
-            <!-- General settings -->
+            <!-- Sign out knop -->
             <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Coming soon..." />
-                <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+                <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Sign out" />
+                <Button onMouseClicked="#signOut" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
             </HBox>
 
-            <!-- Overige Opties -->
-            <VBox spacing="10">
-                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Coming soon.." />
-                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
-                </HBox>
-            </VBox>
-
-            <!-- Help en Uitloggen -->
-            <VBox spacing="10">
-                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Coming soon..." />
-                    <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
-                </HBox>
-                <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                    <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Sign out" />
-                    <Button onMouseClicked="#signOut" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
-                </HBox>
-            </VBox>
         </VBox>
 
         <Region fx:id="spacer" VBox.vgrow="ALWAYS" />
 
-        <!-- Footer Navigatie -->
+        <!-- Footer Navigatie (Teruggeplaatst) -->
         <HBox alignment="CENTER" prefHeight="50" prefWidth="375" spacing="50" style="-fx-padding: 10; -fx-background-color: #222;">
             <ImageView fitHeight="30" fitWidth="30" onMouseClicked="#goToHome">
                 <image>
@@ -80,5 +73,6 @@
                 </cursor>
             </ImageView>
         </HBox>
+
     </VBox>
 </StackPane>

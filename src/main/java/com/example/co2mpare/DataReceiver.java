@@ -11,7 +11,7 @@ public class DataReceiver {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "Aidee123!";
+    private static final String DB_PASSWORD = "Co2mpare!";
 
     private static int loggedInAccountId = -1; // Geen gebruiker ingelogd bij start
 
