@@ -36,10 +36,10 @@
                 <Button onMouseClicked="#goToFAQ" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
             </HBox>
 
-            <!-- Andere instellingen -->
+            <!-- Bestellingen knop (Gewijzigd) -->
             <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
-                <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Coming soon..." />
-                <Button style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+                <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Bestellingen" />
+                <Button onMouseClicked="#goToOrders" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
             </HBox>
 
             <!-- Sign out knop -->
@@ -52,7 +52,7 @@
 
         <Region fx:id="spacer" VBox.vgrow="ALWAYS" />
 
-        <!-- Footer Navigatie (Teruggeplaatst) -->
+        <!-- Footer Navigatie -->
         <HBox alignment="CENTER" prefHeight="50" prefWidth="375" spacing="50" style="-fx-padding: 10; -fx-background-color: #222;">
             <ImageView fitHeight="30" fitWidth="30" onMouseClicked="#goToHome">
                 <image>
