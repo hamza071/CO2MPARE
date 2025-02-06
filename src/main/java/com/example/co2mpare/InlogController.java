@@ -21,7 +21,7 @@ public class InlogController {
     private static final double WINDOW_WIDTH = 375; // Breedte in pixels
     private static final double WINDOW_HEIGHT = 667; // Hoogte in pixels
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/co2mpare!";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "Co2mpare";
 
