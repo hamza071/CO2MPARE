@@ -47,7 +47,13 @@
          <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
             <children>
                <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Over ons" />
-               <Button onMouseClicked="#goToFAQ" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+               <Button onMouseClicked="#goToOverOns" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+            </children>
+         </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+            <children>
+               <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Help" />
+               <Button onMouseClicked="#goToHelp" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
             </children>
          </HBox>
 

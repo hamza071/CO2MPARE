@@ -11,6 +11,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SettingsController {
+    private static final double WINDOW_WIDTH = 375; // Breedte in pixels
+    private static final double WINDOW_HEIGHT = 667; // Hoogte in pixels
+
 
     @FXML
     private void goToHome(MouseEvent event) {
@@ -41,6 +44,12 @@ public class SettingsController {
     private void goToOverOns(MouseEvent event) {
         switchScene("/com/example/co2mpare/OverOnsScherm.fxml", event);
     }
+
+    @FXML
+    private void goToHelp(MouseEvent event) {
+        switchScene("/com/example/co2mpare/HelpScherm.fxml", event);
+    }
+
     @FXML
     private void signOut(MouseEvent event) {
         System.out.println("Gebruiker is uitgelogd.");
