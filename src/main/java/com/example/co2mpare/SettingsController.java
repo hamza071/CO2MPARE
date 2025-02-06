@@ -7,11 +7,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class SettingsController {
-
 
     @FXML
     private void goToHome(MouseEvent event) {
@@ -20,15 +18,12 @@ public class SettingsController {
 
     @FXML
     private void goToQA(MouseEvent event) {
-        switchScene("/com/example/co2mpare/HomeScherm.fxml", event);
+        switchScene("/com/example/co2mpare/QAScherm.fxml", event);
     }
-
-}
-
 
     @FXML
     private void goToCo2mpare(MouseEvent event) {
-        switchScene("/com/example/co2mpare/SettingsScherm.fxml", event);
+        switchScene("/com/example/co2mpare/CompareScherm.fxml", event);
     }
 
     @FXML
@@ -59,6 +54,11 @@ public class SettingsController {
     @FXML
     private void goToAVG(MouseEvent event) {
         switchScene("/com/example/co2mpare/AVGScherm.fxml", event);
+    }
+
+    @FXML
+    private void goToCompare(MouseEvent event) {
+        switchScene("/com/example/co2mpare/CompareScherm.fxml", event);
     }
 
     @FXML

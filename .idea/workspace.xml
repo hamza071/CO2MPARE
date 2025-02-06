@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="blabla">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/AVGApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/AVGController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/AVGScherm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/HelpScherm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/HelpScherm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/OverOnsScherm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/OverOnsScherm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/SettingsScherm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/SettingsScherm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +84,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.46666667",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -146,9 +140,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DatabaseTest" />
-        <item itemvalue="Application.InlogApplication" />
         <item itemvalue="Application.SettingsApplication" />
+        <item itemvalue="Application.InlogApplication" />
+        <item itemvalue="Application.DatabaseTest" />
       </list>
     </recent_temporary>
   </component>
