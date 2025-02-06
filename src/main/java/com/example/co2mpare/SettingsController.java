@@ -11,8 +11,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SettingsController {
-    private static final double WINDOW_WIDTH = 375; // Breedte in pixels
-    private static final double WINDOW_HEIGHT = 667; // Hoogte in pixels
 
 
     @FXML
