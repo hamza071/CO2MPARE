@@ -10,10 +10,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane prefHeight="667" prefWidth="375" style="-fx-background-color: black;"
-           xmlns="http://javafx.com/javafx/23.0.1"
-           xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="com.example.co2mpare.SettingsController">
+<StackPane prefHeight="667" prefWidth="375" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.SettingsController">
 
     <VBox alignment="TOP_CENTER" prefHeight="667" prefWidth="375" spacing="10" style="-fx-padding: 20;">
 
@@ -47,6 +44,12 @@
                 <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Sign out" />
                 <Button onMouseClicked="#signOut" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
             </HBox>
+         <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #3c3c3c; -fx-padding: 10; -fx-background-radius: 5;">
+            <children>
+               <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="Over ons" />
+               <Button onMouseClicked="#goToFAQ" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="&gt;" />
+            </children>
+         </HBox>
 
         </VBox>
 

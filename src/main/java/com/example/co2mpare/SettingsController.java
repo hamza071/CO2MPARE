@@ -38,6 +38,10 @@ public class SettingsController {
     }
 
     @FXML
+    private void goToOverOns(MouseEvent event) {
+        switchScene("/com/example/co2mpare/OverOnsScherm.fxml", event);
+    }
+    @FXML
     private void signOut(MouseEvent event) {
         System.out.println("Gebruiker is uitgelogd.");
         switchScene("/com/example/co2mpare/InlogScherm.fxml", event);
