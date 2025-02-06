@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e9c26a-4f51-47e4-a41e-bc2b4747b172" name="Changes" comment="blabla">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/HelpApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/HelpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/OverOnsApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/OverOnsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/HelpScherm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/AVGApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/AVGController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/AVGScherm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/co2mpare/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/HelpScherm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/HelpScherm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/OverOnsScherm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/OverOnsScherm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/SettingsScherm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/co2mpare/SettingsScherm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,11 +61,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AVGApplication.executor": "Run",
     "Application.CompareApplication.executor": "Run",
     "Application.DataReceiver.executor": "Run",
     "Application.DataStorage.executor": "Run",
     "Application.DatabaseTest.executor": "Run",
+    "Application.HelpApplication.executor": "Run",
+    "Application.HomeApplication.executor": "Run",
     "Application.InlogApplication.executor": "Run",
+    "Application.OverOnsApplication.executor": "Run",
     "Application.RegistrerenApplication.executor": "Run",
     "Application.SettingsApplication.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
@@ -77,7 +81,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/hamza/Documents/GitHub/CO2MPARE/src/main/resources/com/example/co2mpare",
+    "last_opened_file_path": "C:/Users/Gebruiker/IdeaProjects/CO2MPARE/src/main/resources/com/example/co2mpare",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,14 +90,14 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.46666667",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hamza\Documents\GitHub\CO2MPARE\src\main\resources\com\example\co2mpare" />
       <recent name="C:\Users\Gebruiker\IdeaProjects\CO2MPARE\src\main\resources\com\example\co2mpare" />
+      <recent name="C:\Users\hamza\Documents\GitHub\CO2MPARE\src\main\resources\com\example\co2mpare" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/example/co2mpare" />
@@ -142,8 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.InlogApplication" />
         <item itemvalue="Application.DatabaseTest" />
+        <item itemvalue="Application.InlogApplication" />
         <item itemvalue="Application.SettingsApplication" />
       </list>
     </recent_temporary>
@@ -165,6 +169,11 @@
       <option name="presentableId" value="Default" />
       <updated>1732105512799</updated>
       <workItem from="1732106595075" duration="1998000" />
+      <workItem from="1738818998619" duration="4474000" />
+      <workItem from="1738844874671" duration="420000" />
+      <workItem from="1738845313384" duration="174000" />
+      <workItem from="1738845510759" duration="658000" />
+      <workItem from="1738846193659" duration="1302000" />
     </task>
     <task id="LOCAL-00001" summary="inin">
       <option name="closed" value="true" />

@@ -19,8 +19,16 @@ public class SettingsController {
     }
 
     @FXML
-    private void goToCompare(MouseEvent event) {
-        switchScene("/com/example/co2mpare/CompareScherm.fxml", event);
+    private void goToQA(MouseEvent event) {
+        switchScene("/com/example/co2mpare/HomeScherm.fxml", event);
+    }
+
+}
+
+
+    @FXML
+    private void goToCo2mpare(MouseEvent event) {
+        switchScene("/com/example/co2mpare/SettingsScherm.fxml", event);
     }
 
     @FXML
@@ -46,6 +54,11 @@ public class SettingsController {
     @FXML
     private void goToHelp(MouseEvent event) {
         switchScene("/com/example/co2mpare/HelpScherm.fxml", event);
+    }
+
+    @FXML
+    private void goToAVG(MouseEvent event) {
+        switchScene("/com/example/co2mpare/AVGScherm.fxml", event);
     }
 
     @FXML

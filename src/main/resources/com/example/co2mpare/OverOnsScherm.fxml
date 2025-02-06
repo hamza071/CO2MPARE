@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane prefHeight="667" prefWidth="375" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.FAQController">
+<StackPane prefHeight="667" prefWidth="375" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co2mpare.OverOnsController">
 
     <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30; -fx-background-color: #2c2c2c; -fx-background-radius: 10;">
 
@@ -15,7 +15,7 @@
         <!-- Informatieblok -->
         <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: #3c3c3c; -fx-background-radius: 10;">
             <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Ons verhaal" />
-            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="CO2MPARE begon als een schoolproject van een groep studenten met een passie voor technologie. Het doel was om een gebruiksvriendelijke app te ontwikkelen die gegevens eenvoudig beheert. Wat startte als een opdracht, groeide uit tot een applicatie waar we trots op zijn. Dit project staat voor samenwerking en innovatie!" wrapText="true" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="CO2MPARE begon als een schoolproject van een groep studenten met een passie voor technologie en duurzaamheid. Ons doel was om een gebruiksvriendelijke app te ontwikkelen die jongeren inspireert om bewuster om te gaan met het milieu. Wat begon als een opdracht, groeide uit tot een applicatie die niet alleen praktisch is, maar ook bijdraagt aan een groenere toekomst. Dit project staat voor samenwerking, innovatie en impact!" wrapText="true" />
         </VBox>
 
         <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: #3c3c3c; -fx-background-radius: 10;">
